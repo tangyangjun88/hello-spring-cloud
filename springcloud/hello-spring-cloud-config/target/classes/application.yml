@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: hello-spring-cloud-config
+  zipkin:
+    base-url: http://localhost:8769
+  boot:
+    admin:
+      client:
+        url: http://localhost:8770
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tangyangjun88/springcloud-config.git
+          username: tangyangjun88@163.com
+          password: tyj19880818
+      label: master
+server:
+  port: 8888
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
